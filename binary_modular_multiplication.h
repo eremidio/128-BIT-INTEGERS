@@ -13,8 +13,7 @@ __int128_t binary_modular_multiplication(__int128_t, __int128_t, __int128_t);
 
 //****************************************************************************************************************************************
 // FUNÇÕES
-__int128_t binary_modular_multiplication(__int128_t a, __int128_t b,
-                                         __int128_t m) {
+__int128_t binary_modular_multiplication(__int128_t a, __int128_t b, __int128_t m) {
   // Restrição
   assert(a < m && b < m);
 

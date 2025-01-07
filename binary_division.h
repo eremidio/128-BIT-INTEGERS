@@ -19,47 +19,47 @@ __int128_t binary_division(__int128_t, __int128_t);
 
 //Função que calcula o quociente ou limitante inferior deste valor para dois inteiros de 128 bits
 __int128_t binary_division(__int128_t x, __int128_t n){
-//Restriçao
-assert(x>=n);
+
+  //Restriçao
+  assert(x>=n);
 
 
-//Variáveis locais
-__int128_t m=n;
-__int128_t t=(m<<1);
-__int128_t a=0, c=0;
-int b=0, j; 
-
-//Procedimentos 
-
-//Cálculo dos parâmetros m e b usados no algoritmo
-while(1){
-if(m<=x && x<=t)
-break;
-
-b++;
-m<<=1;
-t<<=1;
-        };
+  //Variáveis locais
+  __int128_t m=n;
+  __int128_t t=(m<<1);
+  __int128_t a=0, c=0;
+  int b=0, j; 
 
 
-//Loop principal
-for(j=0; j<=b; ++j){
-c<<=1;
-a=x-m;
-
-if(a>=0){
-c++;
-x=a;
-        };
-
-m>>=1;
-
-                   };
+  //Procedimentos 
+    //Cálculo dos parâmetros m e b usados no algoritmo
+    while(1){
+      if(m<=x && x<=t) break;
+      b++;
+      m<<=1;
+      t<<=1;
+    };
 
 
-//Resultado 
-return c;
-                                                      };
+    //Loop principal
+    for(j=0; j<=b; ++j){
+      c<<=1;
+      a=x-m;
+
+      if(a>=0){
+        c++;
+        x=a;
+      };
+
+      m>>=1;
+
+    };
+
+
+  //Resultado 
+  return c;
+
+};
 
 //*****************************************************************************************************************************************
 //FIM DO HEADER
