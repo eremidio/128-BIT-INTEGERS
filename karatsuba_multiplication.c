@@ -22,15 +22,12 @@ int main(){
     printf("Segunda parcela: ");
     scanf("%s", number_string2);
 
-    printf("Base de redução: ");
-    scanf("%s", number_string3);
 
     first=scanf128(number_string1);
     second=scanf128(number_string2);
-    base=scanf128(number_string3);
 
     //Calculando o produto das duas parcelas
-    result=karatsuba_multiplication(base, first, second);
+    result=karatsuba_multiplication(first, second);
 
     printf("Resultado: ");
     printf128(result);
